@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Amritanshu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="#" id="theme">Theme </a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <div class="profile-img" ></div>
+       
+       <!-- <span id="img">
+        <img src="my-img.jpg" alt="Profile Picture" class="profile-img" />
+       </span> -->
+        
+        <h1>Hi, I'm <span id="name">Amritanshu.</span></h1>
+        <p>Creating Beautiful and Functional Experiences</p>
+        <p id="change"></p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </header>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Amritanshu Singh, a front-end web developer and skilled in
+          Java, C, and Python. I craft dynamic and responsive interfaces that
+          blend clean code with modern technologies. With a
+          <span>B.Tech(CSE)</span> from Galgotia's College of Engineering & Technology, I’ve
+          built a strong foundation in web development and problem-solving.
+        </p>
+
+        <p>
+          My passion for technology drives me to stay updated with the latest
+          trends and continuously improve my skills. Whether it’s developing
+          sleek user interfaces or solving complex programming challenges, I’m
+          dedicated to creating impactful and innovative digital experiences.
+        </p>
+        <p>Let’s connect and build something amazing together!</p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project" id="pizza">
+            <img src="./public/pizza.jpg" alt="Project 1" />
+            <h3>Pizza Application</h3>
+            <p>
+              This Application is made up on React Js which catches the Api data
+              and shows the items avaialble to order and have delivery facility.
+            </p>
+          </div>
+          <div class="project" id="water">
+            <img src="./public/clean.jpg" alt="Project 2" />
+            <h3>Clean Water and Sanitation</h3>
+            <p>
+              A website creted with HTML, CSS, JS just to show importance of
+              clean water an how can we make water clean.
+            </p>
+          </div>
+          <div class="project" id="quiz">
+            <img src="./public/quiz.jpg" alt="Project 3" />
+            <h3>Quiz Application</h3>
+            <p>This quiz Application is created using React Js & JSON.App has scoring and feedback feature along with timer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>My Skills</h2>
+        <ul class="skill-list">
+          <li class="pro" data-level="Pro">HTML5</li>
+          <li class="pro" data-level="Pro">CSS3</li>
+          <li class="inter" data-level="Intermediate">JavaScript</li>
+          <li class="inter" data-level="Intermediate">Mongo DB</li>
+          <li class="newbie" data-level="Newbie">Express Js</li>
+          <li class="inter" data-level="Intermediate">React Js</li>
+          <li class="newbie" data-level="Newbie">Node Js</li>
+          <li class="inter" data-level="Intermediate">Responsive Design</li>
+          <li class="inter" data-level="Intermediate">Java + DSA</li>
+          <li class="inter" data-level="Intermediate">C</li>
+          <li class="pro" data-level="Pro">Python</li>
+        </ul>
+        
+      </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+      <h2>Certificates</h2>
+      <div class="certificate-container">
+        <div class="certificate">
+          <h3>Python Programming</h3>
+          <p>Issued by: Education World</p>
+          <p>Date: August 2022</p>
+          <img
+            src="./public/python.jpg"
+            alt="Certificate Title 1"
+            class="certificate-image"
+          />
+        </div>
+        <div class="certificate">
+          <h3>Front-end Web Development</h3>
+          <p>Issued by: IBM & CSRBOX</p>
+          <p>Date: August 2024</p>
+          <img
+            src="./public/fwd.png"
+            alt="Certificate Title 2"
+            class="certificate-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p>Contact Me</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <div class="icon facebook"></div>
+
+            <a
+              href="https://www.instagram.com/amritanshusingh/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <div class="icon instagram"></div>
+            </a>
+            <a href="mailto:amritanshusingh330@gmail.com" aria-label="Gmail">
+              <div class="icon gmail"></div>
+            </a>
+            <a
+              href="https://github.com/amritanshusinghh"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <div class="icon github"></div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/amritanshusinghh/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <div class="icon linkedin"></div>
+            </a>
+          </a>
+        </div>
+        <p>Desingned By Amritanshu Singh</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

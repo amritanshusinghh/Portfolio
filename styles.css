@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+/* For Logo */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Signika+Negative:wght@300..700&display=swap');
+
+/* For Heading */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Signika+Negative:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* For Para */
+
+
+*{
+    scroll-behavior: smooth;
+}
+
+.theme-dark{
+    --bg:#481010;
+    --nav:white;
+    --head:#ffff;
+    --heading:#eccccc;
+    --para:#dcc0b7;
+    --gbg:#e4bdb8;
+    --bbg:#43312c;
+    --btxt:black;
+    --btn:#5b2d2d;
+    --img:url("./public/my-img.jpg");
+}
+
+:root{
+    --bg:#DDD0C8;
+    --nav:black;
+    --head:#323232;
+    --heading:black;
+    --para:#323232; 
+    --gbg:#e1d6d0;
+    --bbg:#9e9898;
+    --btxt: #323232;
+    --btn:#323232;
+    --img:url("./public/my-img1.jpg");
+    --fontl:"Edu VIC WA NT Beginner", cursive;
+}
+
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color:var(--bbg);
+    color: var(--btxt);
+    line-height: 1.6;
+    transition: background 0.5s ease;
+}
+
+.header {
+    padding: 20px 0;
+    text-align: center;
+    background: var(--bg);
+    transition: background 0.5s ease;
+
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--nav);
+    font-family: var(--fontl);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.logo:hover{
+    text-shadow:0 0 0.5rem var(--para)
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.7rem;
+}
+
+.nav-links a {
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--nav);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: (--heading);
+    text-shadow: 0 0 0.5rem var(--para);
+}
+
+.hero {
+
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg);
+    transition: background 0.6s ease;
+}
+
+
+
+
+
+
+.profile-img {
+    background: var(--img) no-repeat center center/cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 0 1rem var(--para));
+    transition: background 0.5s ease;
+}
+
+.hero h1 {
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--head);
+}
+
+.hero h1 span{
+    color: var(--head);
+}
+
+
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: var(--para);
+}
+
+#change{
+    line-height: 0px;
+    height: 1px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFF;
+    border: 0.5px solid var(--para);
+    background: var(--btn);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.5s ease-out ;
+}
+
+.btn:hover {
+    background:var(--bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about, .projects, .skills, .certificates{
+    padding: 60px 20px;
+    background-color: var(--gbg);
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: background 0.5s ease-in-out;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+
+h2 {
+    font-size: 36px;
+   color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about span{
+    font-weight: 500;
+}
+
+
+/* Project Section */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: var(--bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover{
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    margin: 0;
+    padding: 15px;
+    background: var(--para) no-repeat center center/cover;
+    color:var(--bg);
+}
+
+.project p{
+    color: var(--para);
+}
+
+/* Project Section Ends */
+
+
+/* Skill List Section */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+
+.skill-list li {
+    background: var(--bg) no-repeat center center/cover;
+    color: var(--heading);
+    padding: 10px 20px;
+    border: 2px solid var(--para);
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* Tooltip Styling */
+.skill-list li::after {
+    content: attr(data-level);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--para);
+    color: var(--bg);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  
+  /* Show tooltip on hover */
+  .skill-list li:hover::after {
+    opacity: 1;
+  }
+  
+  /* Make sure each skill item is positioned relative for tooltip */
+  .skill-list li {
+    position: relative;
+  }
+  
+  /* Skill level hover color coding (light & dark mode aware) */
+  .newbie:hover {
+    background-color: #ce762a !important;
+    color: white;
+  }
+  
+  .inter:hover {
+    background-color: #ffcc00 !important; 
+    color: black;
+  }
+  
+  .pro:hover {
+    background-color: green !important; 
+    color: white;
+  }
+  
+/* Skill list ends here */
+
+
+/* Certificate Section Starts here */
+.certificate-container{
+    display: flex;
+text-align: center;
+gap: 10px;
+   
+}
+
+.certificate{
+    line-height: 0.9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate h3{
+        font-size: 1.3rem;
+}
+
+.certificate p{
+    font-size: 1rem;
+}
+
+.certificate img{
+    display: inline-block;
+    height: auto;
+    width: 90%;
+    margin-bottom: 0.5rem;
+    /* border-radius: 5px; */
+   filter: drop-shadow(0 0 0.5rem rgb(82, 77, 77));
+}
+
+
+
+
+
+
+
+
+ footer {
+    background-color:var(--bg);
+    color: var(--para);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .footer-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: white;
+    background-size: cover;
+    display: inline-block;
+    border: 1.5px solid white;
+    box-shadow: 0 0 0.2rem rgb(41, 25, 25);
+    border-radius: 7px;
+    transition: all 0.5s ease;
+  }
+
+
+  .icon.facebook {
+    background-image: url('./public/facebook.png');
+  }
+  .icon.instagram {
+    background-image: url("./public/insta.png");
+  }
+
+  .icon.gmail {
+    background-image: url('./public/mail.png');
+    
+  }
+
+  .icon.github {
+    background-image: url('./public/git.png');
+  }
+
+  .icon.linkedin {
+    background-image: url('./public/link.png');
+  }
+
+ 
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover .icon {
+    filter: invert(100%)
+  }
