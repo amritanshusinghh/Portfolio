@@ -182,7 +182,7 @@ body {
     padding: 40px 20px;
 }
 
-.about, .projects, .skills, .certificates{
+.about,.education, .projects, .skills, .certificates{
     padding: 60px 20px;
     background-color: var(--gbg);
     margin-bottom: 5px;
@@ -208,6 +208,39 @@ p {
 .about span{
     font-weight: 500;
 }
+
+/* Education section below */
+
+.education {
+    background-color: var(--gbg); 
+    padding: 60px 20px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    transition: background 0.5s ease-in-out; 
+  }
+  
+ 
+  
+  .education ul {
+    list-style: none; 
+    padding: 0;
+    text-align: center; 
+  }
+  
+  .education ul li {
+    font-size: 1.1rem; 
+    margin-bottom: 15px; 
+    color: var(--btxt); 
+  }
+  
+  .education ul li strong {
+    font-size: 1.2rem; 
+    color: var(--btn); 
+  }
+  
+ 
+  
+
 
 
 /* Project Section */

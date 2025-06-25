@@ -62,6 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+let JobApplication = document.querySelector("#jobApplication")
+JobApplication.addEventListener("click",()=>{ 
+window.open("https://job-application-status.vercel.app/")
+})
+
+let FeedbackCollection = document.querySelector("#feedbackCollection")
+FeedbackCollection.addEventListener("click",()=>{ 
+window.open("https://feedback-collection-tool.vercel.app/")
+})
+
 let pizza = document.querySelector("#pizza")
 pizza.addEventListener("click",()=>{ 
 window.open("https://pizzaa-react.netlify.app/")
