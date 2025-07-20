@@ -60,7 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriter, typingSpeed);
 });
 
-
+let aiSchool = document.querySelector('#aiSchool')
+aiSchool.addEventListener("click",()=>{
+    window.open("https://amrit-school.vercel.app/")
+})
 
 let JobApplication = document.querySelector("#jobApplication")
 JobApplication.addEventListener("click",()=>{ 
