@@ -62,17 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let aiSchool = document.querySelector('#aiSchool')
 aiSchool.addEventListener("click",()=>{
-    window.open("https://amrit-school.vercel.app/")
+    window.open("https://amritschool.vercel.app/")
 })
 
 let JobApplication = document.querySelector("#jobApplication")
 JobApplication.addEventListener("click",()=>{ 
-window.open("https://job-application-status.vercel.app/")
+window.open("https://applicationstatus.vercel.app/")
 })
 
 let FeedbackCollection = document.querySelector("#feedbackCollection")
 FeedbackCollection.addEventListener("click",()=>{ 
-window.open("https://feedback-collection-tool.vercel.app/")
+window.open("https://feedbackcollection.vercel.app/")
 })
 
 let pizza = document.querySelector("#pizza")
