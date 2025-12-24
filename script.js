@@ -20,7 +20,7 @@
 
 
 
-const messages = ["Web Development.","Programming.","Learning Tech."];
+const messages = ["Web Development.","Programming.","Learning Tech.","Machine Learning"];
 let currentMessageIndex = 0;
 let currentCharIndex = 0;
 let isErasing = false;
@@ -60,9 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriter, typingSpeed);
 });
 
+let resultPredictor = document.querySelector("#resultPredictor")
+resultPredictor.addEventListener("click",()=>{
+    window.open("https://github.com/amritanshusinghh/Student-Result-Predictor")
+})
+
+
 let aiSchool = document.querySelector('#aiSchool')
 aiSchool.addEventListener("click",()=>{
     window.open("https://amritschool.vercel.app/")
+})
+
+let healthcare = document.querySelector("#healthcare")
+healthcare.addEventListener("click",()=>{
+    window.open("https://github.com/amritanshusinghh/Healthcare-System")
 })
 
 let JobApplication = document.querySelector("#jobApplication")

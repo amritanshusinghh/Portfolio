@@ -356,7 +356,7 @@ p {
     display: flex;
 text-align: center;
 gap: 10px;
-   
+   margin-bottom: 10px;
 }
 
 .certificate{
@@ -401,6 +401,8 @@ gap: 10px;
     margin-bottom: 10px;
   }
 
+  
+
   .social-icons {
     display: flex;
     justify-content: center;
@@ -420,8 +422,9 @@ gap: 10px;
   }
 
 
-  .icon.facebook {
-    background-image: url('./public/facebook.png');
+  .icon.leetcode {
+    background-image: url('./public/leetcode.png');
+    background-color: rgb(44, 43, 43);
   }
   .icon.instagram {
     background-image: url("./public/insta.png");
