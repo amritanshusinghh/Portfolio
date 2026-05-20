@@ -38,57 +38,74 @@
       <nav class="navbar">
         <div class="logo">Portfolio</div>
         <ul class="nav-links">
-          <li><a href="#" id="theme">Theme </a></li>
+          <li><a href="" id="theme">Theme </a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
         </ul>
       </nav>
-
-      <div class="hero">
-        <div class="profile-img"></div>
-
-        <!-- <span id="img">
-        <img src="my-img.jpg" alt="Profile Picture" class="profile-img" />
-       </span> -->
-
-        <h1>Hi, I'm <span id="name">Amritanshu.</span></h1>
-        <p>Creating Beautiful and Functional Experiences</p>
-        <p id="change"></p>
-        <a href="#projects" class="btn">View My Work</a>
-      </div>
     </header>
+
+    <div class="hero">
+      <div class="profile-img"></div>
+
+      <!-- <span id="img">
+      <img src="my-img.jpg" alt="Profile Picture" class="profile-img" />
+     </span> -->
+
+      <h1>Hi, I'm <span id="name">Amritanshu.</span></h1>
+      <p>Creating Beautiful and Functional Experiences</p>
+      <p id="change"></p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
 
     <section id="about" class="about">
       <div class="container">
         <h2>About Me</h2>
-        <p>
-          Hi, I’m <strong>Amritanshu Singh</strong>, a full-stack
+        <p class="about-intro">
+          Hi, I'm <strong>Amritanshu Singh</strong> &mdash; a full-stack
           <strong>MERN developer</strong> with hands-on internship experience at
           <strong>IBM CSRBOX</strong>. I specialize in building scalable web
           applications and intelligent systems, combining clean frontend design
           with robust backend architecture.
         </p>
 
-        <p>
-          I am currently pursuing a
-          <span>B.Tech in Computer Science & Engineering</span> (CGPA: 8.0,
-          expected 2026) from Galgotias College of Engineering & Technology.
-          Alongside web development, I have strong experience in
-          <strong>Data Structures & Algorithms</strong> and
-          <strong>Machine Learning</strong>, including data preprocessing,
-          feature scaling, model evaluation, and end-to-end ML pipelines using
-          Python and Scikit-learn.
-        </p>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">&#x1F4BB;</div>
+            <h3>Full-Stack Developer</h3>
+            <p>
+              Proficient in MongoDB, Express.js, React.js &amp; Node.js.
+              I build end-to-end web apps with secure REST APIs,
+              JWT authentication, and real-time features via WebSockets.
+            </p>
+          </div>
 
-        <p>
-          I enjoy solving real-world problems—whether it’s building AI-powered
-          platforms, secure REST APIs, real-time applications, or optimizing
-          user experiences. I’m always eager to learn new technologies,
-          contribute to open source, and create impactful digital solutions.
-        </p>
+          <div class="about-card">
+            <div class="about-card-icon">&#x1F393;</div>
+            <h3>Education</h3>
+            <p>
+              Pursuing <strong>B.Tech in CSE</strong> (CGPA: 8.0, expected 2026)
+              from Galgotias College of Engineering &amp; Technology. Strong
+              foundation in <strong>DSA</strong> and algorithmic problem-solving.
+            </p>
+          </div>
 
-        <p>Let’s collaborate and build something meaningful together.</p>
+          <div class="about-card">
+            <div class="about-card-icon">&#x1F916;</div>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>
+              Experienced in data preprocessing, feature scaling, model
+              evaluation, and end-to-end ML pipelines using Python,
+              Scikit-learn, NumPy &amp; Pandas.
+            </p>
+          </div>
+        </div>
+
+        <p class="about-cta">
+          I enjoy solving real-world problems &mdash; from AI-powered platforms to
+          real-time apps. Let's collaborate and build something meaningful. &#x1F680;
+        </p>
       </div>
     </section>
 
@@ -96,9 +113,9 @@
       <div class="container">
         <h2>Education</h2>
         <ul>
-          <li><strong>Galgotias College of Engineering & Technology</strong> – B.Tech in CSE (2023 – 2026)</li>
-          <li><strong>M.P. Polytechnic, Gorakhpur</strong> – Diploma in CSE (2021 – 2023)</li>
-          <li><strong>Academic Global School, Gorakhpur</strong> – Higher Secondary (12th), CBSE Board</li>
+          <li><strong>Galgotias College of Engineering &amp; Technology</strong> &ndash; B.Tech in CSE (2023 &ndash; 2026)</li>
+          <li><strong>M.P. Polytechnic, Gorakhpur</strong> &ndash; Diploma in CSE (2021 &ndash; 2023)</li>
+          <li><strong>Academic Global School, Gorakhpur</strong> &ndash; Higher Secondary (12th), CBSE Board</li>
         </ul>
       </div>
     </section> -->
@@ -107,74 +124,159 @@
       <div class="container">
         <h2>My Projects</h2>
         <div class="project-grid">
+
           <div class="project" id="resultPredictor">
-            <img src="./public/result.jpg" alt="Project 0" />
-            <h3>Student Result Predictor - ML</h3>
-            <p>
-              End-to-end Machine Learning project demonstrating data
-              preprocessing, model training, and prediction.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/result.jpg" alt="Student Result Predictor" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Student Result Predictor</h3>
+              <p>
+                End-to-end Machine Learning project demonstrating data
+                preprocessing, model training, and prediction.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Scikit-learn</span><span>ML</span>
+              </div>
+            </div>
           </div>
 
           <div class="project" id="aiSchool">
-            <img src="./public/ai.jpg" alt="Project 1" />
-            <h3>Amrit's School-AI Learning Platform</h3>
-            <p>
-              Amrit's School is your all-in-one AI learning assistant with a
-              roadmap generator, quiz creator, and real-time study rooms.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/ai.jpg" alt="AI Learning Platform" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Amrit's School &mdash; AI Platform</h3>
+              <p>
+                All-in-one AI learning assistant with a roadmap generator,
+                quiz creator, and real-time study rooms.
+              </p>
+              <div class="project-tags">
+                <span>React</span><span>Node.js</span><span>AI</span>
+              </div>
+            </div>
           </div>
 
           <div class="project" id="healthcare">
-            <img src="./public/health.jpg" alt="Project 2" />
-            <h3>Health Care System - Django</h3>
-            <p>
-              A secure and scalable 🩺Healthcare System built using Django,
-              Django REST Framework, and PostgreSQL.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/health.jpg" alt="Healthcare System" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Health Care System</h3>
+              <p>
+                A secure and scalable Healthcare System built using Django,
+                Django REST Framework, and PostgreSQL.
+              </p>
+              <div class="project-tags">
+                <span>Django</span><span>DRF</span><span>PostgreSQL</span>
+              </div>
+            </div>
           </div>
 
           <div class="project" id="jobApplication">
-            <img src="./public/job.jpg" alt="Project 3" />
-            <h3>Job Application Tracker</h3>
-            <p>
-              A MERN Stack application which tracks the application status and
-              notify with the E-Mail service and also have JWT authentication.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/job.jpg" alt="Job Application Tracker" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Job Application Tracker</h3>
+              <p>
+                Tracks application status with E-Mail notifications
+                and JWT authentication built on MERN Stack.
+              </p>
+              <div class="project-tags">
+                <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span>
+              </div>
+            </div>
           </div>
 
           <div class="project" id="feedbackCollection">
-            <img src="./public/feedback.jpg" alt="Project 4" />
-            <h3>Feedback Collection</h3>
-            <p>
-              Real-time feedback system with live updates via WebSockets and
-              analytics dashboards using Chart.js on Admin Panel.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/feedback.jpg" alt="Feedback Collection" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Feedback Collection</h3>
+              <p>
+                Real-time feedback system with live updates via WebSockets
+                and analytics dashboards using Chart.js.
+              </p>
+              <div class="project-tags">
+                <span>WebSocket</span><span>Chart.js</span><span>MERN</span>
+              </div>
+            </div>
           </div>
+
           <div class="project" id="pizza">
-            <img src="./public/pizza.jpg" alt="Project 5" />
-            <h3>Pizza Application</h3>
-            <p>
-              This Application is made up on React Js which catches the Api data
-              and shows the items avaialble to order and have delivery facility.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/pizza.jpg" alt="Pizza Application" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Pizza Application</h3>
+              <p>
+                React.js app fetching API data to display menu items
+                with ordering and delivery facility.
+              </p>
+              <div class="project-tags">
+                <span>React</span><span>REST API</span>
+              </div>
+            </div>
           </div>
+
           <div class="project" id="water">
-            <img src="./public/clean.jpg" alt="Project 6" />
-            <h3>Clean Water and Sanitation</h3>
-            <p>
-              A website creted with HTML, CSS, JS just to show importance of
-              clean water an how can we make water clean.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/clean.jpg" alt="Clean Water and Sanitation" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Clean Water &amp; Sanitation</h3>
+              <p>
+                Awareness website showcasing the importance of clean water
+                and methods for water purification.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
           </div>
+
           <div class="project" id="quiz">
-            <img src="./public/quiz.jpg" alt="Project 7" />
-            <h3>Quiz Application</h3>
-            <p>
-              This quiz Application is created using React Js & JSON.App has
-              scoring and feedback feature along with timer.
-            </p>
+            <div class="project-img-wrap">
+              <img src="./public/quiz.jpg" alt="Quiz Application" />
+              <div class="project-overlay">
+                <span class="project-view-btn">View Project &rarr;</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Quiz Application</h3>
+              <p>
+                Interactive quiz app with scoring, feedback,
+                and countdown timer built with React.js.
+              </p>
+              <div class="project-tags">
+                <span>React</span><span>JSON</span>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -209,7 +311,7 @@
       <div class="certificate-container">
         <div class="certificate">
           <h3>GoFr Open Source Contribution</h3>
-          <p>Issued by: GoFr & Unstop</p>
+          <p>Issued by: GoFr &amp; Unstop</p>
           <p>Date: August 2025</p>
           <img
             src="./public/GoFr.jpeg"
@@ -220,7 +322,7 @@
 
         <div class="certificate">
           <h3>Google AI Agent Intensive Course</h3>
-          <p>Issued by: Google & Kaggle</p>
+          <p>Issued by: Google &amp; Kaggle</p>
           <p>Date: December 2025</p>
           <img
             src="./public/GoogleAI.png"
@@ -243,7 +345,7 @@
         </div>
         <div class="certificate">
           <h3>Front-end Web Development</h3>
-          <p>Issued by: IBM & CSRBOX</p>
+          <p>Issued by: IBM &amp; CSRBOX</p>
           <p>Date: August 2024</p>
           <img
             src="./public/fwd.png"
@@ -264,34 +366,33 @@
             aria-label="Leetcode"
           >
             <div class="icon leetcode"></div>
-
-            <a
-              href="https://www.instagram.com/amritanshusingh/"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <div class="icon instagram"></div>
-            </a>
-            <a href="mailto:amritanshusingh330@gmail.com" aria-label="Gmail">
-              <div class="icon gmail"></div>
-            </a>
-            <a
-              href="https://github.com/amritanshusinghh"
-              target="_blank"
-              aria-label="GitHub"
-            >
-              <div class="icon github"></div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/amritanshusinghh/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <div class="icon linkedin"></div>
-            </a>
+          </a>
+          <a
+            href="https://www.instagram.com/amritanshusingh/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <div class="icon instagram"></div>
+          </a>
+          <a href="mailto:amritanshusingh330@gmail.com" aria-label="Gmail">
+            <div class="icon gmail"></div>
+          </a>
+          <a
+            href="https://github.com/amritanshusinghh"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <div class="icon github"></div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/amritanshusinghh/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <div class="icon linkedin"></div>
           </a>
         </div>
-        <p>Desingned By Amritanshu Singh</p>
+        <p>Designed By Amritanshu Singh</p>
       </div>
     </footer>
     <script src="script.js"></script>
