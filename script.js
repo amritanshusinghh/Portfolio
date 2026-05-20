@@ -1,26 +1,6 @@
-// let i = 0;
-// let txt = 'Amritanshu.'
 
 
-
-// function Typing(){
-//     if(i<txt.length){
-//         document.getElementById("name").innerText += txt.charAt(i);
-//         i++
-//     }
-//     setTimeout(Typing,150)
-// }
-
-
-// Typing()
-
-
-
-
-
-
-
-const messages = ["Web Development.","Programming.","Learning Tech.","Machine Learning"];
+const messages = ["Web Development.","Programming.","Learning Tech.","Artificial Intelligence."];
 let currentMessageIndex = 0;
 let currentCharIndex = 0;
 let isErasing = false;
