@@ -15,35 +15,35 @@
     scroll-behavior: smooth;
 }
 
-/* ===== DARK MAROON THEME ===== */
+/* ===== WARM DARK THEME ===== */
 .theme-dark{
-    --bg: #1a0a0a;
-    --nav: #f5d0c5;
-    --head: #fce4dc;
-    --heading: #ff6b6b;
-    --para: #d4a59a;
-    --gbg: #2a1215;
-    --bbg: #0d0404;
-    --btxt: #e8cfc8;
-    --btn: #8b2252;
-    --accent: #ff6b6b;
-    --card-bg: #31181a;
-    --card-border: rgba(255, 107, 107, 0.15);
-    --card-glow: rgba(139, 34, 82, 0.3);
+    --bg: #1c1410;
+    --nav: #e8d5c4;
+    --head: #f2e0d0;
+    --heading: #e8a87c;
+    --para: #b89a85;
+    --gbg: #241c16;
+    --bbg: #110d09;
+    --btxt: #d9c4b0;
+    --btn: #c9956b;
+    --accent: #e8a87c;
+    --card-bg: #2a2118;
+    --card-border: rgba(232, 168, 124, 0.12);
+    --card-glow: rgba(201, 149, 107, 0.15);
     --img:url("./public/my-img.jpg");
 }
 
 :root{
     --bg:#DDD0C8;
-    --nav:black;
-    --head:#323232;
-    --heading:black;
-    --para:#323232; 
-    --gbg:#e1d6d0;
-    --bbg:#9e9898;
-    --btxt: #323232;
-    --btn:#323232;
-    --accent: #8b2252;
+    --nav:#2c2c2c;
+    --head:#2c2c2c;
+    --heading:#3a3a3a;
+    --para:#4a4a4a; 
+    --gbg:#e6dbd4;
+    --bbg:#c4b8b0;
+    --btxt: #3a3a3a;
+    --btn:#4a3728;
+    --accent: #8b6e53;
     --card-bg: #f5ebe7;
     --card-border: rgba(0, 0, 0, 0.08);
     --card-glow: rgba(0, 0, 0, 0.06);
@@ -68,7 +68,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 14px 0;
     text-align: center;
     background: var(--bg);
     transition: background 0.5s ease;
@@ -103,7 +103,92 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 0.7rem;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--nav);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger open state */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile responsive nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--bg);
+        padding: 80px 30px 30px;
+        gap: 0;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+        transition: right 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 1050;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+    }
+
+    /* Overlay */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1040;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
 }
 
 .nav-links a {
@@ -123,11 +208,42 @@ body {
 }
 
 .hero {
-
-    padding: 60px 20px;
+    padding: 80px 20px 60px;
     text-align: center;
     background: var(--bg);
     transition: background 0.6s ease;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Mobile hero fix */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 16px 40px;
+    }
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
 }
 
 
@@ -168,8 +284,9 @@ body {
 }
 
 #change{
-    line-height: 0px;
-    height: 1px;
+    line-height: 1.4;
+    height: auto;
+    min-height: 1.4em;
 }
 
 .btn {
@@ -198,7 +315,7 @@ body {
     padding: 40px 20px;
 }
 
-.about,.education, .projects, .skills, .certificates{
+.about,.education, .experience, .projects, .skills, .certificates{
     padding: 60px 20px;
     background-color: var(--gbg);
     margin-bottom: 5px;
@@ -207,6 +324,172 @@ body {
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
+
+/* ===== Experience Section ===== */
+
+.exp-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 36px;
+}
+
+/* Vertical line */
+.exp-timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--para));
+    border-radius: 4px;
+}
+
+.exp-card {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 28px 28px 20px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px var(--card-glow);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, background 0.5s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px var(--card-glow);
+    border-color: var(--accent);
+}
+
+/* Timeline dot */
+.exp-dot {
+    position: absolute;
+    left: -30px;
+    top: 32px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 0 0 3px var(--para);
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.exp-card:hover .exp-dot {
+    background: #27ae60;
+    box-shadow: 0 0 0 3px #27ae60, 0 0 12px rgba(39, 174, 96, 0.4);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.exp-title-group h3 {
+    margin: 0 0 2px;
+    font-size: 1.25rem;
+    color: var(--heading);
+    font-family: "Signika Negative", sans-serif;
+}
+
+.exp-company {
+    font-size: 0.95rem;
+    color: var(--btxt);
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.exp-date {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--bg);
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--card-border);
+    transition: background 0.5s ease;
+}
+
+.exp-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px;
+}
+
+.exp-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--btxt);
+    text-align: left;
+}
+
+.exp-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exp-tags span {
+    background: var(--bg);
+    color: var(--accent);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border: 1px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.exp-tags span:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Responsive: stack header on small screens */
+@media (max-width: 600px) {
+    .exp-header {
+        flex-direction: column;
+    }
+    .exp-timeline {
+        padding-left: 28px;
+    }
+    .exp-timeline::before {
+        left: 10px;
+    }
+    .exp-dot {
+        left: -24px;
+        width: 12px;
+        height: 12px;
+    }
+    .exp-card {
+        padding: 20px 18px 16px;
+    }
+}
+
+/* ===== Experience Section Ends ===== */
 
 h2 {
     font-size: 36px;

@@ -37,13 +37,20 @@
     <header class="header">
       <nav class="navbar">
         <div class="logo">Portfolio</div>
-        <ul class="nav-links">
-          <li><a href="" id="theme">Theme </a></li>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="javascript:void(0)" id="theme">Theme</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
         </ul>
       </nav>
+      <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
     <div class="hero">
@@ -65,7 +72,7 @@
         <p class="about-intro">
           Hi, I'm <strong>Amritanshu Singh</strong> &mdash; a full-stack
           <strong>MERN developer</strong> with hands-on internship experience at
-          <strong>IBM CSRBOX</strong>. I specialize in building scalable web
+          <strong>4WayTechnologies</strong>. I specialize in building scalable web
           applications and intelligent systems, combining clean frontend design
           with robust backend architecture.
         </p>
@@ -85,7 +92,7 @@
             <div class="about-card-icon">&#x1F393;</div>
             <h3>Education</h3>
             <p>
-              Pursuing <strong>B.Tech in CSE</strong> (CGPA: 8.0, expected 2026)
+              Completed <strong>B.Tech in CSE</strong> in 2026 (CGPA: 8.2)
               from Galgotias College of Engineering &amp; Technology. Strong
               foundation in <strong>DSA</strong> and algorithmic problem-solving.
             </p>
@@ -109,16 +116,74 @@
       </div>
     </section>
 
-    <!-- <section id="education" class="education">
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="experience">
       <div class="container">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>Galgotias College of Engineering &amp; Technology</strong> &ndash; B.Tech in CSE (2023 &ndash; 2026)</li>
-          <li><strong>M.P. Polytechnic, Gorakhpur</strong> &ndash; Diploma in CSE (2021 &ndash; 2023)</li>
-          <li><strong>Academic Global School, Gorakhpur</strong> &ndash; Higher Secondary (12th), CBSE Board</li>
-        </ul>
+        <h2>Experience</h2>
+        <div class="exp-timeline">
+
+          <!-- Experience 1 -->
+          <div class="exp-card">
+            <div class="exp-dot"></div>
+            <div class="exp-header">
+              <div class="exp-title-group">
+                <h3>SDE-1 Intern</h3>
+                <span class="exp-company">4Way Technologies</span>
+              </div>
+              <span class="exp-date">Mar 2026 &mdash; Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Optimized React.js frontend and Node.js APIs, reducing page load latency by 25%.</li>
+              <li>Built REST APIs, improved frontend responsiveness, and collaborated on scalable backend architecture.</li>
+              <li>Managed Git-based development workflows, resolved production bugs, and assisted deployment pipelines.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>React.js</span><span>WebSockets</span><span>Sentry</span><span>Sanity</span><span>Axiom</span><span>Node.js</span><span>REST API</span><span>Git</span>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="exp-card">
+            <div class="exp-dot"></div>
+            <div class="exp-header">
+              <div class="exp-title-group">
+                <h3>Applied AI Intern</h3>
+                <span class="exp-company">AICTE &amp; CSRBOX</span>
+              </div>
+              <span class="exp-date">Dec 2025 &mdash; Jan 2026</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Implemented machine learning models using Scikit-learn with preprocessing and evaluation techniques.</li>
+              <li>Performed feature engineering, model tuning, and analysis using precision, recall, and F1-score.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Python</span><span>Scikit-learn</span><span>Numpy</span><span>Pandas</span><span>ML</span><span>Data Analysis</span>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="exp-card">
+            <div class="exp-dot"></div>
+            <div class="exp-header">
+              <div class="exp-title-group">
+                <h3>Frontend Developer Intern</h3>
+                <span class="exp-company">IBM SkillsBuild</span>
+              </div>
+              <span class="exp-date">Jun 2024 &mdash; Aug 2024</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Led a team of 5 members to build reusable React.js components integrated with REST APIs following component-driven architecture.</li>
+              <li>Improved mobile responsiveness and cross-browser compatibility across frontend modules.</li>
+              <li>Collaborated in Agile sprint cycles and performed API testing using Postman.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>React.js</span><span>REST API</span><span>Agile</span><span>Postman</span>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </section> -->
+    </section>
 
     <section id="projects" class="projects">
       <div class="container">
@@ -152,10 +217,10 @@
               </div>
             </div>
             <div class="project-content">
-              <h3>Amrit's School &mdash; AI Platform</h3>
+              <h3>Amrit's School &mdash; AI Learning Platform</h3>
               <p>
                 All-in-one AI learning assistant with a roadmap generator,
-                quiz creator, and real-time study rooms.
+                quiz creator, and real-time public and private study rooms.
               </p>
               <div class="project-tags">
                 <span>React</span><span>Node.js</span><span>AI</span>
@@ -285,22 +350,40 @@
       <div class="container">
         <h2>My Skills</h2>
         <ul class="skill-list">
-          <li class="inter" data-level="Intermediate">Machine Learning</li>
-          <li class="pro" data-level="pro">Numpy</li>
+          <li class="pro" data-level="Pro">JavaScript</li>
+          <li class="pro" data-level="Pro">TypeScript</li>
+          <li class="pro" data-level="Pro">Java</li>
+          <li class="pro" data-level="Pro">Python</li>
+          <li class="inter" data-level="Intermediate">SQL</li>
+          <li class="pro" data-level="Pro">React.js</li>
+          <li class="inter" data-level="Intermediate">Redux</li>
+          <li class="inter" data-level="Intermediate">Context API</li>
           <li class="pro" data-level="Pro">HTML5</li>
           <li class="pro" data-level="Pro">CSS3</li>
-          <li class="pro" data-level="Pro">JavaScript</li>
-          <li class="pro" data-level="Pro">Mongo DB</li>
-          <li class="pro" data-level="Pro">Express Js</li>
-          <li class="pro" data-level="Pro">React Js</li>
-          <li class="inter" data-level="Intermediate">Node Js</li>
-          <li class="inter" data-level="Intermediate">Responsive Design</li>
-          <li class="pro" data-level="Pro">TypeScript</li>
-          <li class="inter" data-level="Intermediate">Java + DSA</li>
-          <li class="inter" data-level="Intermediate">C#</li>
-          <li class="pro" data-level="Pro">Python</li>
+          <li class="inter" data-level="Intermediate">Tailwind CSS</li>
+          <li class="inter" data-level="Intermediate">Bootstrap</li>
+          <li class="inter" data-level="Intermediate">Chart.js</li>
+          <li class="pro" data-level="Pro">Node.js</li>
+          <li class="pro" data-level="Pro">Express.js</li>
+          <li class="pro" data-level="Pro">REST APIs</li>
+          <li class="inter" data-level="Intermediate">JWT Authentication</li>
+          <li class="inter" data-level="Intermediate">RBAC</li>
+          <li class="pro" data-level="Pro">Socket.IO</li>
+          <li class="inter" data-level="Intermediate">Nodemailer</li>
+          <li class="pro" data-level="Pro">MongoDB</li>
+          <li class="inter" data-level="Intermediate">PostgreSQL</li>
+          <li class="inter" data-level="Intermediate">MySQL</li>
+          <li class="pro" data-level="Pro">Git</li>
+          <li class="pro" data-level="Pro">GitHub</li>
+          <li class="pro" data-level="Pro">Postman</li>
+          <li class="inter" data-level="Intermediate">Linux</li>
+          <li class="inter" data-level="Intermediate">Docker</li>
+          <li class="pro" data-level="Pro">Netlify</li>
+          <li class="pro" data-level="Pro">Vercel</li>
+          <li class="inter" data-level="Intermediate">Google Gemini API</li>
+          <li class="inter" data-level="Intermediate">Scikit-learn</li>
           <li class="inter" data-level="Intermediate">Pandas</li>
-          <li class="inter" data-level="Intermediate">Web Socket</li>
+          <li class="inter" data-level="Intermediate">NumPy</li>
         </ul>
       </div>
     </section>
