@@ -46,9 +46,9 @@ resultPredictor.addEventListener("click",()=>{
 })
 
 
-let aiSchool = document.querySelector('#aiSchool')
+let aiSchool = document.querySelector('#mindkarts')
 aiSchool.addEventListener("click",()=>{
-    window.open("https://amritschool.vercel.app/")
+    window.open("https://learning-platform-dk8.pages.dev/")
 })
 
 let healthcare = document.querySelector("#healthcare")

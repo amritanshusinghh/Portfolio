@@ -846,12 +846,15 @@ p {
 /* Certificate Section Starts here */
 .certificate-container{
     display: flex;
-text-align: center;
-gap: 10px;
-   margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .certificate{
+    flex: 1;
+    max-width: calc(50% - 5px);
     line-height: 0.9;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
